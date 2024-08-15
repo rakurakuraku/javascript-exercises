@@ -1,8 +1,8 @@
 const findTheOldest = function(arr) {
-    let thisYear = (new Date()).getFullYear();
-
+    
     for (let person = 0; person < arr.length; person ++) {
       if (!('yearOfDeath' in arr[person])) {
+        let thisYear = (new Date()).getFullYear();
         arr[person].yearOfDeath = thisYear;
       };
     };
